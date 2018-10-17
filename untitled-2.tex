@@ -1,0 +1,249 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[20pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Algorithms Homework 1}
+\author{Liam Dillingham}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Question 4.5-1}
+
+Use the master method to give tight asymptotic bounds for the following recurrences.
+
+\subsection{$T(n) = 2T(n/4) + 1$}
+
+(1) Extract:
+\\ \indent $a = 2, b = 4, f(n) = 1$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_4 2} = n^{1 / 2}$ 
+\\ \\
+(3) Compare:
+\\ \indent $\lim_{n\to\infty} n^{1 / 2} \geq \lim_{n\to\infty}1$
+\\ \\
+(4) We have case $f(n) = \mathcal{O}(n^{\log_b a - \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{\log_4 2}) =  \Theta(\sqrt{n})$
+
+\subsection{$T(n) = 2T(n/4) +  \sqrt{n}$}
+
+(1) Extract:
+\\ \indent $a = 2, b = 4, f(n) = \sqrt{n}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_4 2} = n^{1 / 2}$ 
+\\ \\
+(3) Compare:
+\\ \indent $\lim_{n\to\infty} n^{1 / 2} = \lim_{n\to\infty}\sqrt{n}$
+\\ \\
+(4) We have case $f(n) = \Theta(n^{\log_b a - \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{\log_4 2}\lg n) = \Theta(\sqrt{n}lg(n))$
+
+\newpage
+\subsection{$T(n) = 2T(n/4) + n$}
+
+(1) Extract:
+\\ \indent $a = 2, b = 4, f(n) = n$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_4 2} = n^{1 / 2}$ 
+\\ \\
+(3) Compare:
+\\ \indent $\lim_{n\to\infty} n^{1 / 2} \leq \lim_{n\to\infty}n$
+\\ \\
+(4) We have case $f(n) = \Omega(n^{\log_b a + \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n)$
+
+\subsection{$T(n) = 2T(n/4) + n^2$}
+
+(1) Extract:
+\\ \indent $a = 2, b = 4, f(n) = n^{2}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_4 2} = n^{1 / 2}$ 
+\\ \\
+(3) Compare:
+\\ \indent $\lim_{n\to\infty} n^{1 / 2} \leq \lim_{n\to\infty}n^{2}$
+\\ \\
+(4) We have case $f(n) = \Omega(n^{\log_b a + \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{2})$
+
+\newpage
+\section{Question 4-1}
+\subsection{$T(n) = 2T(n/2) + n^{4}$}
+
+(1) Extract:
+\\ \indent $a = 2, b = 2, f(n) = n^{4}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_2 2} = n^{1}$
+\\ \\
+(3) Compare:
+\\ \indent $\lim_{n\to\infty} n^{1} \leq \lim_{n\to\infty}n^{4}$
+\\ \\
+(4) We have case $f(n) = \Omega(n^{\log_b a + \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{4})$
+
+
+\subsection{$T(n) = T(7n/10) + n$}
+
+(1) Extract:
+\\ \indent $a = 1, b = 10/7, f(n) = n$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_1.4 1} = n^{0} = 1$
+\\ \\ 
+(3) Compare:
+\\ \indent  $\lim_{n\to\infty}1 \leq \lim_{n\to\infty}n$
+\\ \\ 
+(4) We have case $f(n) = \Omega(n^{\log_b a + \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n)$
+
+\subsection{$T(n) = 16T(n/4) + n^{2}$}
+
+(1) Extract:
+\\ \indent $a = 16, b = 4, f(n) = n^{2}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_4 16} = n^{2}$
+\\ \\
+(3) Compare:
+\\ \indent  $\lim_{n\to\infty} n^{2} = \lim_{n\to\infty}n^{2}$
+\\ \\
+(4) We have case $f(n) = \Theta(n^{\log_b a - \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{\log_4 16}\lg n) = \Theta(n^{2}lg(n))$
+
+\newpage
+\subsection{$T(n) = 7T(n/3) + n^{2}$}
+
+(1) Extract:
+\\ \indent $a = 7, b = 3, f(n) = n^{2}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_3 7} = n^{1.77}$
+\\ \\
+(3) Compare:
+\\ \indent  $\lim_{n\to\infty} n^{1.77} \leq \lim_{n\to\infty}n^{2}$
+\\ \\
+4) We have case $f(n) = \Omega(n^{\log_b a + \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{2})$
+
+\subsection{$T(n) = 7T(n/2) + n^{2}$}
+
+(1) Extract:
+\\ \indent $a = 7, b = 2, f(n) = n^{2}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_2 7} = n^{2.81}$
+\\
+Note that because we have the form $n^{\log_2 7}$, we can rewrite as $n^{lg 7}$
+\\ \\
+(3) Compare:
+\\ \indent  $\lim_{n\to\infty} n^{lg 7} \geq \lim_{n\to\infty}n^{2}$
+\\ \\
+4) We have case $f(n) = \Omega(n^{\log_b a + \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{lg 7})$
+
+\subsection{$T(n) = 2T(n/4) + \sqrt{n}$}
+
+(1) Extract:
+\\ \indent $a = 2, b = 4, f(n) = \sqrt{n}$ 
+\\ \\
+(2) Determine:
+\\ \indent $n^{\log_b a} = n^{\log_4 2} = n^{1/2}$
+\\ \\
+(3) Compare:
+\\ \indent  $\lim_{n\to\infty} n^{1/2} = \lim_{n\to\infty}\sqrt{n}$
+\\ \\
+4) We have case $f(n) = \Omega(n^{\log_b a - \epsilon})$
+\\ Thus the answer is $T(n) = \Theta(n^{\log_4 2}\lg n) = \Theta(\sqrt{n}lg(n))$
+
+\newpage
+\subsection{$T(n) = T(n-2) + n^{2}$}
+
+(1) Note that Master's Method cannot be applied here.
+\\ \\
+$T(n) = T(n-2) + n^{2}$
+\\ \\ solve the equation for $n-2$\\ \\
+$T(n-2) = T((n-2) - 2) + (n-2)^{2}$
+\\ \\ plug back in \\ \\ 
+$T(n) = T(n-4) + (n-2)^{2} + n^{2}$
+\\ \\ solve for n-4 \\ \\ 
+$T(n-4) = T((n-4) - 2) + (n-4)^{2}$ 
+\\ \\ and plug back in \\ \\ 
+$T(n) = T(n-6) + (n-4)^{2} + (n-2)^{2} + n^{2}$
+\\ \\ now solve for n-6 \\ \\
+$T(n-6) = T((n-6) - 2) + (n-6)^{2}$
+\\ \\ and finally, plug back in \\ \\
+$T(n) = T(n-8) + (n-6)^{2} + (n-4)^{2} + (n-2)^{2} + n^{2}$
+\\ \\ 
+Note that because $n$ is finite, we will eventually have the form: \\ 
+$T(n) = 2^{2} + 4^{2} + 6^{2} + ... + (n-4)^{2} + (n-2)^{2} + n^{2}$
+
+$$\sum_{i=0}^{n/2} (n-2i)^2 = 2^{2} + 4^{2} + 6^{2} + ... + (n-4)^{2} + (n-2)^{2} + n^{2}$$
+
+This is very similar to the square pyramidal series \\
+
+$$ n^{2} + (n-1)^{2} + (n-2)^{2} + ... + 1^{2} = \frac{n(n+1)(2n+1)}{6}$$
+
+Since we are incrementing by 2, we are taking half the series.  As $n$ grows without without bound, the two become identical.
+Note that by multiplying through by $n$, we achieve\\
+$$\frac{2n^{3} + 3n^{2} +n}{6}$$ \\
+
+Since $n^3$ is the leading term, then we have:
+$$T(n) = \Theta(n^{3})$$
+\end{document}
