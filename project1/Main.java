@@ -1,14 +1,5 @@
 import java.util.Random;
-import java.util.ArrayList;
 import java.util.TreeSet;
-
-class Item {
-  boolean empty;
-
-  Item() {
-    empty = true;
-  }
-}
 
 class Main {
   static final int TABLE_SIZE = 1009;
