@@ -210,7 +210,25 @@ class CountingSort {
   }
 }
 
+class RadixSort {
+  RadixSort() {
 
+  }
+
+  static void sort(int[] arr) {
+    int max = Integer.toString(arr[0]).length();
+    for(int i = 0; i < arr.length; ++i) {
+      if(Integer.toString(arr[i]).length() > max)
+        max = Integer.toString(arr[i]).length();
+    }
+
+    radixSort(arr, max);
+  }
+
+  static void radixSort(int[] arr, int d) {
+
+  }
+}
 
 
 class SortingAlgorithms {
