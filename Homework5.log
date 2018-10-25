@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.24)  24 OCT 2018 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  25 OCT 2018 15:22
 entering extended mode
 **./Homework5.tex
 (Homework5.tex
 LaTeX2e <2018-04-01> patch level 5
-(E:\miketex\tex\latex\base\article.cls
+(C:\miketex\tex\latex\base\article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(E:\miketex\tex\latex\base\size10.clo
+(C:\miketex\tex\latex\base\size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -19,25 +19,25 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (E:\miketex\tex\latex\base\inputenc.sty
+) (C:\miketex\tex\latex\base\inputenc.sty
 Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
-) (E:\miketex\tex\latex\geometry\geometry.sty
+) (C:\miketex\tex\latex\geometry\geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-(E:\miketex\tex\latex\graphics\keyval.sty
+(C:\miketex\tex\latex\graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-(E:\miketex\tex\generic\oberdiek\ifpdf.sty
+(C:\miketex\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
-(E:\miketex\tex\generic\oberdiek\ifvtex.sty
+(C:\miketex\tex\generic\oberdiek\ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(E:\miketex\tex\generic\ifxetex\ifxetex.sty
+(C:\miketex\tex\generic\ifxetex\ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -53,28 +53,28 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks17
 
-(E:\miketex\tex\latex\geometry\geometry.cfg))
-(E:\miketex\tex\latex\graphics\graphicx.sty
+(C:\miketex\tex\latex\geometry\geometry.cfg))
+(C:\miketex\tex\latex\graphics\graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(E:\miketex\tex\latex\graphics\graphics.sty
+(C:\miketex\tex\latex\graphics\graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(E:\miketex\tex\latex\graphics\trig.sty
+(C:\miketex\tex\latex\graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(E:\miketex\tex\latex\graphics-cfg\graphics.cfg
+(C:\miketex\tex\latex\graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(E:\miketex\tex\latex\graphics-def\pdftex.def
+(C:\miketex\tex\latex\graphics-def\pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-(E:\miketex\tex\latex\booktabs\booktabs.sty
+(C:\miketex\tex\latex\booktabs\booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen113
 \lightrulewidth=\dimen114
@@ -94,7 +94,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count94
 \@thisrulewidth=\dimen125
 )
-(E:\miketex\tex\latex\tools\array.sty
+(C:\miketex\tex\latex\tools\array.sty
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \col@sep=\dimen126
 \ar@mcellbox=\box26
@@ -104,7 +104,7 @@ Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
 \backup@length=\skip44
 \ar@cellbox=\box27
 )
-(E:\miketex\tex\latex\paralist\paralist.sty
+(C:\miketex\tex\latex\paralist\paralist.sty
 Package: paralist 2017/01/22 v2.7 Extended list environments
 \pltopsep=\skip45
 \plpartopsep=\skip46
@@ -112,119 +112,85 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plparsep=\skip48
 \pl@lab=\toks19
 )
-(E:\miketex\tex\latex\tools\verbatim.sty
+(C:\miketex\tex\latex\tools\verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks20
 \verbatim@line=\toks21
 \verbatim@in@stream=\read1
 )
-(E:\miketex\tex\latex\subfig\subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-
-(E:\miketex\tex\latex\caption\caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
-
-(E:\miketex\tex\latex\caption\caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen128
-\captionmargin@=\dimen129
-\captionwidth=\dimen130
-\caption@tempdima=\dimen131
-\caption@indent=\dimen132
-\caption@parindent=\dimen133
-\caption@hangindent=\dimen134
-)
-\c@caption@flags=\count95
-\c@ContinuedFloat=\count96
-)
-\c@KVtest=\count97
-\sf@farskip=\skip49
-\sf@captopadj=\dimen135
-\sf@capskip=\skip50
-\sf@nearskip=\skip51
-\c@subfigure=\count98
-\c@subfigure@save=\count99
-\c@lofdepth=\count100
-\c@subtable=\count101
-\c@subtable@save=\count102
-\c@lotdepth=\count103
-\sf@top=\skip52
-\sf@bottom=\skip53
-)
-(E:\miketex\tex\latex\mathtools\mathtools.sty
+(C:\miketex\tex\latex\mathtools\mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
-(E:\miketex\tex\latex\tools\calc.sty
+(C:\miketex\tex\latex\tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count104
-\calc@Bcount=\count105
-\calc@Adimen=\dimen136
-\calc@Bdimen=\dimen137
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Acount=\count95
+\calc@Bcount=\count96
+\calc@Adimen=\dimen128
+\calc@Bdimen=\dimen129
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count106
-\calc@Cskip=\skip56
+\calc@Ccount=\count97
+\calc@Cskip=\skip51
 )
-(E:\miketex\tex\latex\mathtools\mhsetup.sty
+(C:\miketex\tex\latex\mathtools\mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
-(E:\miketex\tex\latex\amsmath\amsmath.sty
+(C:\miketex\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip57
+\@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-(E:\miketex\tex\latex\amsmath\amstext.sty
+(C:\miketex\tex\latex\amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(E:\miketex\tex\latex\amsmath\amsgen.sty
+(C:\miketex\tex\latex\amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks22
-\ex@=\dimen138
+\ex@=\dimen130
 ))
-(E:\miketex\tex\latex\amsmath\amsbsy.sty
+(C:\miketex\tex\latex\amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen139
+\pmbraise@=\dimen131
 )
-(E:\miketex\tex\latex\amsmath\amsopn.sty
+(C:\miketex\tex\latex\amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count107
+\inf@bad=\count98
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count108
-\leftroot@=\count109
+\uproot@=\count99
+\leftroot@=\count100
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count110
-\DOTSCASE@=\count111
+\classnum@=\count101
+\DOTSCASE@=\count102
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
-\big@size=\dimen140
+\big@size=\dimen132
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count112
-\c@MaxMatrixCols=\count113
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
-\c@parentequation=\count114
-\dspbrk@lvl=\count115
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
 \tag@help=\toks23
-\row@=\count116
-\column@=\count117
-\maxfields@=\count118
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
 \andhelp@=\toks24
-\eqnshift@=\dimen141
-\alignsep@=\dimen142
-\tagshift@=\dimen143
-\tagwidth@=\dimen144
-\totwidth@=\dimen145
-\lineht@=\dimen146
+\eqnshift@=\dimen133
+\alignsep@=\dimen134
+\tagshift@=\dimen135
+\tagwidth@=\dimen136
+\totwidth@=\dimen137
+\lineht@=\dimen138
 \@envbody=\toks25
-\multlinegap=\skip58
-\multlinetaggap=\skip59
+\multlinegap=\skip53
+\multlinetaggap=\skip54
 \mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
@@ -233,100 +199,123 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count119
-\l_MT_multwidth_dim=\dimen147
-\origjot=\skip60
-\l_MT_shortvdotswithinadjustabove_dim=\dimen148
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen149
-\l_MT_above_intertext_sep=\dimen150
-\l_MT_below_intertext_sep=\dimen151
-\l_MT_above_shortintertext_sep=\dimen152
-\l_MT_below_shortintertext_sep=\dimen153
+\g_MT_multlinerow_int=\count110
+\l_MT_multwidth_dim=\dimen139
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen140
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen141
+\l_MT_above_intertext_sep=\dimen142
+\l_MT_below_intertext_sep=\dimen143
+\l_MT_above_shortintertext_sep=\dimen144
+\l_MT_below_shortintertext_sep=\dimen145
 )
-(E:\miketex\tex\latex\fancyhdr\fancyhdr.sty
+(C:\miketex\tex\latex\caption\subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(C:\miketex\tex\latex\caption\caption.sty
+Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+
+(C:\miketex\tex\latex\caption\caption3.sty
+Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen146
+\captionmargin@=\dimen147
+\captionwidth=\dimen148
+\caption@tempdima=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+)
+\c@ContinuedFloat=\count111
+)
+\c@subfigure=\count112
+\c@subtable=\count113
+)
+(C:\miketex\tex\latex\fancyhdr\fancyhdr.sty
 Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip61
-\f@nch@O@elh=\skip62
-\f@nch@O@erh=\skip63
-\f@nch@O@olh=\skip64
-\f@nch@O@orh=\skip65
-\f@nch@O@elf=\skip66
-\f@nch@O@erf=\skip67
-\f@nch@O@olf=\skip68
-\f@nch@O@orf=\skip69
+\f@nch@headwidth=\skip56
+\f@nch@O@elh=\skip57
+\f@nch@O@erh=\skip58
+\f@nch@O@olh=\skip59
+\f@nch@O@orh=\skip60
+\f@nch@O@elf=\skip61
+\f@nch@O@erf=\skip62
+\f@nch@O@olf=\skip63
+\f@nch@O@orf=\skip64
 )
-(E:\miketex\tex\latex\sectsty\sectsty.sty
+(C:\miketex\tex\latex\sectsty\sectsty.sty
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
-(E:\miketex\tex\latex\tocbibind\tocbibind.sty
+(C:\miketex\tex\latex\tocbibind\tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
 
 Package tocbibind Note: Using section or other style headings.
 
-) (E:\miketex\tex\latex\tocloft\tocloft.sty
+) (C:\miketex\tex\latex\tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip70
-\cftbeforetoctitleskip=\skip71
-\cftaftertoctitleskip=\skip72
-\cftbeforepartskip=\skip73
-\cftpartnumwidth=\skip74
-\cftpartindent=\skip75
-\cftbeforesecskip=\skip76
-\cftsecindent=\skip77
-\cftsecnumwidth=\skip78
-\cftbeforesubsecskip=\skip79
-\cftsubsecindent=\skip80
-\cftsubsecnumwidth=\skip81
-\cftbeforesubsubsecskip=\skip82
-\cftsubsubsecindent=\skip83
-\cftsubsubsecnumwidth=\skip84
-\cftbeforeparaskip=\skip85
-\cftparaindent=\skip86
-\cftparanumwidth=\skip87
-\cftbeforesubparaskip=\skip88
-\cftsubparaindent=\skip89
-\cftsubparanumwidth=\skip90
-\cftbeforeloftitleskip=\skip91
-\cftafterloftitleskip=\skip92
-\cftbeforefigskip=\skip93
-\cftfigindent=\skip94
-\cftfignumwidth=\skip95
-\cftbeforelottitleskip=\skip96
-\cftafterlottitleskip=\skip97
-\cftbeforetabskip=\skip98
-\cfttabindent=\skip99
-\cfttabnumwidth=\skip100
-\cftbeforesubfigskip=\skip101
-\cftsubfigindent=\skip102
-\cftsubfignumwidth=\skip103
-\cftbeforesubtabskip=\skip104
-\cftsubtabindent=\skip105
-\cftsubtabnumwidth=\skip106
+\cftparskip=\skip65
+\cftbeforetoctitleskip=\skip66
+\cftaftertoctitleskip=\skip67
+\cftbeforepartskip=\skip68
+\cftpartnumwidth=\skip69
+\cftpartindent=\skip70
+\cftbeforesecskip=\skip71
+\cftsecindent=\skip72
+\cftsecnumwidth=\skip73
+\cftbeforesubsecskip=\skip74
+\cftsubsecindent=\skip75
+\cftsubsecnumwidth=\skip76
+\cftbeforesubsubsecskip=\skip77
+\cftsubsubsecindent=\skip78
+\cftsubsubsecnumwidth=\skip79
+\cftbeforeparaskip=\skip80
+\cftparaindent=\skip81
+\cftparanumwidth=\skip82
+\cftbeforesubparaskip=\skip83
+\cftsubparaindent=\skip84
+\cftsubparanumwidth=\skip85
+\cftbeforeloftitleskip=\skip86
+\cftafterloftitleskip=\skip87
+\cftbeforefigskip=\skip88
+\cftfigindent=\skip89
+\cftfignumwidth=\skip90
+\cftbeforelottitleskip=\skip91
+\cftafterlottitleskip=\skip92
+\cftbeforetabskip=\skip93
+\cfttabindent=\skip94
+\cfttabnumwidth=\skip95
+\cftbeforesubfigskip=\skip96
+\cftsubfigindent=\skip97
+\cftsubfignumwidth=\skip98
+\cftbeforesubtabskip=\skip99
+\cftsubtabindent=\skip100
+\cftsubtabnumwidth=\skip101
 )
 
 LaTeX Warning: Unused global option(s):
     [20pt].
 
-No file Homework5.aux.
+(Homework5.aux)
 \openout1 = `Homework5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -361,44 +350,44 @@ LaTeX Font Info:    ... okay on input line 71.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(E:\miketex\tex\context\base\supp-pdf.mkii
+(C:\miketex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
-\scratchdimen=\dimen154
+\scratchcounter=\count114
+\scratchdimen=\dimen153
 \scratchbox=\box30
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\nofMPsegments=\count115
+\nofMParguments=\count116
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count123
-\MPscratchDim=\dimen155
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen154
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks28
-) (E:\miketex\tex\latex\oberdiek\epstopdf-base.sty
+) (C:\miketex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(E:\miketex\tex\generic\oberdiek\infwarerr.sty
+(C:\miketex\tex\generic\oberdiek\infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(E:\miketex\tex\latex\oberdiek\grfext.sty
+(C:\miketex\tex\latex\oberdiek\grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(E:\miketex\tex\generic\oberdiek\kvdefinekeys.sty
+(C:\miketex\tex\generic\oberdiek\kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(E:\miketex\tex\generic\oberdiek\ltxcmds.sty
+(C:\miketex\tex\generic\oberdiek\ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(E:\miketex\tex\latex\oberdiek\kvoptions.sty
+(C:\miketex\tex\latex\oberdiek\kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(E:\miketex\tex\generic\oberdiek\kvsetkeys.sty
+(C:\miketex\tex\generic\oberdiek\kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(E:\miketex\tex\generic\oberdiek\etexcmds.sty
+(C:\miketex\tex\generic\oberdiek\etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(E:\miketex\tex\generic\oberdiek\ifluatex.sty
+(C:\miketex\tex\generic\oberdiek\ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -407,7 +396,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(E:\miketex\tex\generic\oberdiek\pdftexcmds.sty
+(C:\miketex\tex\generic\oberdiek\pdftexcmds.sty
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -423,53 +412,114 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--91
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
-
- []
-
+<1.jpg, id=1, 136.25906pt x 91.09032pt>
+File: 1.jpg Graphic file (type jpg)
+<use 1.jpg>
+Package pdftex.def Info: 1.jpg  used on input line 94.
+(pdftex.def)             Requested size: 167.2989pt x 111.8472pt.
+<2.jpg, id=2, 241.90375pt x 211.79124pt>
+File: 2.jpg Graphic file (type jpg)
+<use 2.jpg>
+Package pdftex.def Info: 2.jpg  used on input line 98.
+(pdftex.def)             Requested size: 167.2989pt x 146.47867pt.
+<3-1.jpg, id=3, 282.05376pt x 309.155pt>
+File: 3-1.jpg Graphic file (type jpg)
+<use 3-1.jpg>
+Package pdftex.def Info: 3-1.jpg  used on input line 104.
+(pdftex.def)             Requested size: 167.2989pt x 183.37634pt.
+<3-2.jpg, id=4, 241.65282pt x 164.11313pt>
+File: 3-2.jpg Graphic file (type jpg)
+<use 3-2.jpg>
+Package pdftex.def Info: 3-2.jpg  used on input line 108.
+(pdftex.def)             Requested size: 167.2989pt x 113.6213pt.
+<4-1.jpg, id=5, 357.335pt x 323.2075pt>
+File: 4-1.jpg Graphic file (type jpg)
+<use 4-1.jpg>
+Package pdftex.def Info: 4-1.jpg  used on input line 113.
+(pdftex.def)             Requested size: 167.2989pt x 151.32066pt.
+<4-2.jpg, id=6, 357.335pt x 323.2075pt>
+File: 4-2.jpg Graphic file (type jpg)
+<use 4-2.jpg>
+Package pdftex.def Info: 4-2.jpg  used on input line 117.
+(pdftex.def)             Requested size: 167.2989pt x 151.32066pt.
+<5-1.jpg, id=7, 462.72874pt x 407.5225pt>
+File: 5-1.jpg Graphic file (type jpg)
+<use 5-1.jpg>
+Package pdftex.def Info: 5-1.jpg  used on input line 124.
+(pdftex.def)             Requested size: 167.2989pt x 147.33603pt.
+<5-2.jpg, id=8, 477.785pt x 295.1025pt>
+File: 5-2.jpg Graphic file (type jpg)
+<use 5-2.jpg>
+Package pdftex.def Info: 5-2.jpg  used on input line 128.
+(pdftex.def)             Requested size: 167.2989pt x 103.32794pt.
+<6-1.jpg, id=9, 532.99126pt x 389.455pt>
+File: 6-1.jpg Graphic file (type jpg)
+<use 6-1.jpg>
+Package pdftex.def Info: 6-1.jpg  used on input line 133.
+(pdftex.def)             Requested size: 167.2989pt x 122.24516pt.
+<6-2.jpg, id=10, 532.99126pt x 389.455pt>
+File: 6-2.jpg Graphic file (type jpg)
+<use 6-2.jpg>
+Package pdftex.def Info: 6-2.jpg  used on input line 137.
+(pdftex.def)             Requested size: 167.2989pt x 122.24516pt.
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (Homework5.aux) ) 
+{C:/Users/lgdillin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+[2 <./1.jpg> <./2.jpg> <./3-1.jpg> <./3-2.jpg> <./4-1.jpg> <./4-2.jpg>]
+[3 <./5-1.jpg> <./5-2.jpg> <./6-1.jpg> <./6-2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 189--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--195
+
+ []
+
+[5] (Homework5.aux) ) 
 Here is how much of TeX's memory you used:
- 5176 strings out of 492970
- 76683 string characters out of 3143381
- 160060 words of memory out of 3000000
- 8980 multiletter control sequences out of 15000+200000
- 9009 words of font info for 33 fonts, out of 3000000 for 9000
+ 5138 strings out of 492972
+ 75932 string characters out of 3143401
+ 160156 words of memory out of 3000000
+ 8926 multiletter control sequences out of 15000+200000
+ 9476 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,43p,370b,198s stack positions out of 5000i,500n,10000p,200000b,50000s
-<E:/
-miketex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><E:/miketex/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmr12.pfb><E
-:/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb><E:/miketex/fonts/type1/publ
-ic/amsfonts/cm/cmss12.pfb><E:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pfb
->
-Output written on Homework5.pdf (2 pages, 71020 bytes).
+ 42i,10n,43p,602b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/miketex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
+miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/miketex/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/miketex/fonts/type1/public
+/amsfonts/cm/cmss12.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/miketex/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Homework5.pdf (5 pages, 238753 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
+ 60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
