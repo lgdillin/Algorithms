@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  25 OCT 2018 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  26 OCT 2018 12:44
 entering extended mode
 **./Homework5.tex
 (Homework5.tex
@@ -477,37 +477,114 @@ Underfull \hbox (badness 10000) in paragraph at lines 148--150
 
  []
 
+<a1.jpg, id=26, 613.29124pt x 482.80376pt>
+File: a1.jpg Graphic file (type jpg)
+<use a1.jpg>
+Package pdftex.def Info: a1.jpg  used on input line 154.
+(pdftex.def)             Requested size: 167.2989pt x 131.69954pt.
+<a2.jpg, id=27, 543.02875pt x 387.4475pt>
+File: a2.jpg Graphic file (type jpg)
+<use a2.jpg>
+Package pdftex.def Info: a2.jpg  used on input line 158.
+(pdftex.def)             Requested size: 167.2989pt x 119.36848pt.
+<a3-1.jpg, id=28, 472.76625pt x 387.4475pt>
+File: a3-1.jpg Graphic file (type jpg)
+<use a3-1.jpg>
+Package pdftex.def Info: a3-1.jpg  used on input line 164.
+(pdftex.def)             Requested size: 167.2989pt x 137.11029pt.
+<a3-2.jpg, id=29, 472.76625pt x 387.4475pt>
+File: a3-2.jpg Graphic file (type jpg)
+<use a3-2.jpg>
+Package pdftex.def Info: a3-2.jpg  used on input line 168.
+(pdftex.def)             Requested size: 167.2989pt x 137.11029pt.
+<a4-1.jpg, id=30, 442.65375pt x 256.96pt>
+File: a4-1.jpg Graphic file (type jpg)
+<use a4-1.jpg>
+Package pdftex.def Info: a4-1.jpg  used on input line 173.
+(pdftex.def)             Requested size: 167.2989pt x 97.11649pt.
+<a4-2.jpg, id=31, 442.65375pt x 256.96pt>
+File: a4-2.jpg Graphic file (type jpg)
+<use a4-2.jpg>
+Package pdftex.def Info: a4-2.jpg  used on input line 177.
+(pdftex.def)             Requested size: 167.2989pt x 97.11649pt.
+<a5-1.jpg, id=32, 392.46625pt x 211.79124pt>
+File: a5-1.jpg Graphic file (type jpg)
+<use a5-1.jpg>
+Package pdftex.def Info: a5-1.jpg  used on input line 182.
+(pdftex.def)             Requested size: 167.2989pt x 90.28316pt.
+<a5-2.jpg, id=33, 392.46625pt x 211.79124pt>
+File: a5-2.jpg Graphic file (type jpg)
+<use a5-2.jpg>
+Package pdftex.def Info: a5-2.jpg  used on input line 186.
+(pdftex.def)             Requested size: 167.2989pt x 90.28316pt.
+<a6-1.jpg, id=34, 352.31625pt x 131.49126pt>
+File: a6-1.jpg Graphic file (type jpg)
+<use a6-1.jpg>
+Package pdftex.def Info: a6-1.jpg  used on input line 191.
+(pdftex.def)             Requested size: 167.2989pt x 62.43892pt.
+<a6-2.jpg, id=35, 352.31625pt x 131.49126pt>
+File: a6-2.jpg Graphic file (type jpg)
+<use a6-2.jpg>
+Package pdftex.def Info: a6-2.jpg  used on input line 195.
+(pdftex.def)             Requested size: 167.2989pt x 62.43892pt.
+<a7.jpg, id=36, 71.26625pt x 31.11626pt>
+File: a7.jpg Graphic file (type jpg)
+<use a7.jpg>
+Package pdftex.def Info: a7.jpg  used on input line 200.
+(pdftex.def)             Requested size: 167.2989pt x 73.04625pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+LaTeX Warning: Float too large for page by 107.16444pt on input line 204.
+
+[4] [5 <./a1.jpg> <./a2.jpg> <./a3-1.jpg> <./a3-2.jpg> <./a4-1.jpg> <./a4-2.jpg
+> <./a5-1.jpg> <./a5-2.jpg> <./a6-1.jpg> <./a6-2.jpg> <./a7.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Underfull \hbox (badness 10000) in paragraph at lines 232--234
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 244--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+LaTeX Warning: Characters dropped after `\end{verbatim}' on input line 281.
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
 
  []
 
-[5] (Homework5.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
+
+ []
+
+[9] (Homework5.aux) ) 
 Here is how much of TeX's memory you used:
- 5138 strings out of 492972
- 75932 string characters out of 3143401
+ 5193 strings out of 492972
+ 76551 string characters out of 3143401
  160156 words of memory out of 3000000
- 8926 multiletter control sequences out of 15000+200000
+ 8970 multiletter control sequences out of 15000+200000
  9476 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,10n,43p,602b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -517,9 +594,9 @@ miketex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/miketex/fonts/type1/public
 /miketex/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/miketex/fonts/type1/public
 /amsfonts/cm/cmss12.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 C:/miketex/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Homework5.pdf (5 pages, 238753 bytes).
+Output written on Homework5.pdf (9 pages, 372254 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

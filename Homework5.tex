@@ -148,27 +148,85 @@ Show the red-black trees that result after successively inserting the keys 41, 3
 In Exercise 13.3-2, you found the red-black tree that results from successively inserting the keys 41, 38, 31, 12, 19, 8 into an initially empty tree. Now show the red-black trees that result from the successive deletion of the keys in the order 8, 12, 19, 31, 38, 41. \\
 \noindent\rule{2cm}{0.4pt} \\
 
+\begin{figure}[!htbp]
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a1.jpg}
+     	\caption{Starting state}
+   	\end{subfigure}
+  	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a2.jpg}
+    	\caption{Deleting 8}
+  	\end{subfigure}
 
+  	\centering
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a3-1.jpg}
+     	\caption{Delete 12}
+   	\end{subfigure}
+  	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a3-2.jpg}
+    	\caption{Re-coloring}
+  	\end{subfigure}
+
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a4-1.jpg}
+     	\caption{Delete 19}
+   	\end{subfigure}
+  	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a4-2.jpg}
+    	\caption{Re-color}
+  	\end{subfigure}
+
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a5-1.jpg}
+     	\caption{Delete 31}
+   	\end{subfigure}
+  	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a5-2.jpg}
+    	\caption{Re-color}
+  	\end{subfigure}
+
+   	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a6-1.jpg}
+     	\caption{Delete 38}
+   	\end{subfigure}
+  	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a6-2.jpg}
+    	\caption{Re-color}
+  	\end{subfigure}
+
+  	\begin{subfigure}[p]{0.4\linewidth}
+    	\includegraphics[width=\linewidth]{a7.jpg}
+    	\caption{Delete 41}
+  	\end{subfigure}
+
+\end{figure}
+
+\newpage
+\newpage
+\newpage
+\newpage
 \section{Question 14.1-3}
-Show how OS-SELECT(T.root, 10) operates on the red-black tree T of Figure 14.1 \\
+Write a non-recursive version of OS-SELECT. \\
 \noindent\rule{2cm}{0.4pt} \\
 
-It may be useful to have the code for OS-SELECT(x, i) below to walk through 
 \begin{verbatim}
-OS-SELECT(x,i)
-   r = x.left.size+ 1
-   if i == r
-     return x
-   elseif i < r
-     return OS-SELECT(x.left, i)
-   else return OS-SELECT(x.right, i - r)
-\end{verbatim} 
+OS-SELECT(x, i)
+   while x != nil
+      r = x.left.size + 1
+      if i == r
+         return x
+      elseif i < r
+         x = x.left
+      else 
+         x = x.right
+         i = i - r
+\end{verbatim}
 
-First we calculate the rank of the root. $r = 12 + 1 = 13$. since $i = 10$, and $10 < 13$, we recursively call OS-SELECT(T.root.left, 10). \\
-Now we calculate the rank of the current subtree root. $r = 7 + 1 = 8$. since $8 < 10$, we call OS-SELECT(x.right, 2). \\
-Now we are at the node with a key =  21, and we calculate its rank. $r = 2 + 1 = 3$. since $i < r$, we take the left subtree, and call OS-SELECT(x.left, 2) \\
-Now we are at the node with key = 19, where $i = 2$, and rank $r = 0 + 1 = 1$.  since $i > r$, we make the call OS-SELECT(x.right, 1). \\
-Now we are at node key = 20.  $r = 0 + 1 = 1$ and $i = 1$ thus, since $i == r$, we have our 10th smallest node, which is node where key = 20.
+with the initial call being OS-SELECT(T.root, i).
+
+
 
 \section{Question 14.1-5}
 Given an element $x$ in an $n$-node order-statistic tree and a natural number $i$, how can we determine the $i$th successor of $x$ in linear order of the tree in $\mathcal{O}(\lg n)$ time? \\
@@ -179,12 +237,88 @@ determining the $i$th successor of a node x is similar to determining $i$th smal
 OS-SELECT(T.root, OS-RANK(T, x) + i)
 \end{verbatim}
 
+Note that OS-RANK runs in time $\mathcal{O}(\lg n)$. In addition, OS-SELECT runs in time  $\mathcal{O}(\lg n)$.  Thus the run time of determining the $i$th successor is $\mathcal{O}(\lg n)$ time
 
+\newpage
 \section{Question 14.1-6}
 Observe that whenever we reference the size attribute of a node in either OS-SELECT or OS-RANK, we use it only to compute a rank.  Accordingly, suppose we store in each node its rank in the subree of which it is the root. Show how to maintain this information during insertion and deletion. (Remember that these two operations can cause rotations). \\
 \noindent\rule{2cm}{0.4pt} \\
 
+Once the new node is inserted, we will need to first call PREDECESSOR on our newly inserted node, and set the rank of our new as PREDECESSOR.rank + 1. The we will need to call the SUCCESSOR function for the new node, and on each subsequent node, and increase the rank of each node by 1. \\
 
+Handling the rotations resulting from deletions and insertions is simple; we can simply stick this new logic at the end of the functions.  The modified code for deletions and insertions is shown below:
+
+\begin{verbatim}
+RB-Insert(T, z)
+   y = T.nil
+   x = T.root
+	
+   while x != T.nil
+      y = x
+      if z.key < x.key
+         x = x.left
+      else x = x.right
+   z.p = y
+   if y == T.nil
+      T.root = z
+   elseif z.key < y.key
+      y.left = z
+   else y.right = z
+   z.left = T.nil
+   z.right = T.nil
+   z.color = RED
+   RB-INSERT-FIXUP(T,z)
+
+   // Beginning new code
+   // Get rank of predecessor and increase the rank of the new node by 1
+   z.rank = PREDECESSOR(T, z).rank + 1 
+
+   w = SUCCESSOR(T, z) // Get z's successor
+   while w != nil // While there is a successor
+      w.rank = w.rank + 1 // increase its rank
+      w = SUCCESSOR(T, w) // Get the next successor
+
+\end{verbatim} \\
+
+\newpage
+Deletion of a node involves some early book-keeping, but since the rank of the nodes is in linear order, so long as we bookmark the location in the rank list, we can carry on like normal
+\begin{verbatim}
+RB-DELETE(T,z)
+   // Save z's successor
+   w = SUCCESSOR(T, z)
+
+   y = z
+   y-original-color = y.color
+   if z.left == T.nil
+      x = z.right
+      RB-TRANSPLANT(T, z, z.right)
+   elseif z.right == T.nil
+      x = z.left
+      RB-TRANSPLANT(T, z, z.left)
+   else 
+      y = TREE-MINIMUM(z.right)
+      y-original-color = y.color
+      x = y.right
+      if y.p == z
+         x.p = y
+      else
+         RB-TRANSPLANT(T, y, y.right)
+         y.right = z.right
+         y.right.p = y
+      RB-TRANSPLANT(T, z, y)
+      y.left = z.left
+      y.left.p = y
+      y.color = z.color
+   if y-original-color == BLACK
+      RB-DELETE-FIXUP(T, x)
+
+   while w != nil
+      w.rank = w.rank - 1
+      w = SUCCESSOR(T, w)
+
+\end{verbatim}
+
+\newpage
 \section{Question 14.1-7}
 Show how to use an order-statistic tree to count the number of inversions (see problem 2-4) in an array of size $n$ in time $\mathcal{O}(n \lg n)$  \\ 
 \noindent\rule{2cm}{0.4pt} \\
@@ -192,7 +326,9 @@ Show how to use an order-statistic tree to count the number of inversions (see p
 Problem 2-4 states: \\
 Let $A[1..n]$ be an array of $n$ distinct numbers. If $i < j$ and $A[i] > A[j]$, then the pair $(i,j)$ is called an inversion of A. \\ \\
 
+To count the total number of inversion for an array is simple.  For each $j$, count the number of elements greater than $A[j]$ that precede it.  Do this for all $j \in 1..n$, and that is the total number of inversions.  Note that by using an order-statistic tree, we can easily obtain the rank of any element $A[j]$, essentially "sorting" it.  Note also that if an element preceding $j$ is less than $j$, then it is not an inversion. That is, the rank of $j$ is its index minus the number of inversions. $rank(j) = NumInversion(j) - j$. \\
 
+If we re-arrange this equation, we can get $NumInversion(j) = rank(j) + j$. That is, by inserting $j$ into the tree, we can then find its rank. then we can add the index of $j$ to the rank, and calculate the number of inversions. Note that both insertion and rank calculation take $\mathcal{O}(\lg n)$ time each. since we have to do this for $n$ elements (from the array), then to calculate the total number of inversions using an order-statistic tree, it will take  $\mathcal{O}(n \lg n)$ time.
 
 
 
