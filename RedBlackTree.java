@@ -32,6 +32,7 @@ class RedBlackTree extends BinarySearchTree {
     nil.parent = nil;
 
     root = nil;
+    root.parent = nil;
   }
 
   static RBNode rbMinimum(RBNode x) {
@@ -98,7 +99,7 @@ class RedBlackTree extends BinarySearchTree {
     else if(z.key < y.key)
       y.left = z;
     else
-      z.left = z;
+      y.right = z;
 
     z.left = rbt.nil;
     z.right = rbt.nil;
@@ -202,7 +203,7 @@ class RedBlackTree extends BinarySearchTree {
       if(x == x.parent.left) {
         RBNode w = x.parent.left;
 
-        // Case 1: z's uncle is red (y is red)
+        // Case 1: x's uncle is red (w is red)
         if(w.color == Color.RED) {
           w.color = Color.BLACK;
           x.parent.color = Color.RED;
@@ -210,12 +211,12 @@ class RedBlackTree extends BinarySearchTree {
           w = x.parent.right;
         }
 
-        // Case 2: if y is black and z is a right child
+        // Case 2: if w is black and z is a right child
         if(w.left.color == Color.BLACK && w.right.color == Color.BLACK) {
           w.color = Color.RED;
           x = x.parent;
 
-        // Case 3: y is black and z is a right child
+        // Case 3: w is black and z is a right child
         } else if(w.right.color == Color.BLACK) {
           w.left.color = Color.BLACK;
           w.color = Color.RED;
@@ -272,8 +273,8 @@ class RedBlackTree extends BinarySearchTree {
       u.parent.left = v;
     } else {
       u.parent.right = v;
-      v.parent = u.parent;
     }
+    v.parent = u.parent;
   }
 
   void print(RBNode x) {
@@ -295,19 +296,23 @@ class RedBlackTree extends BinarySearchTree {
       RBNode x = new RBNode(r.nextInt(300));
       RedBlackTree.rbInsert(rbt, x);
 
-      // if(r.nextDouble() < 0.2)
-      //   a = x;
-      // else if(r.nextDouble() < 0.5)
-      //   b = x;
-      // else if(r.nextDouble() < 0.7)
-      //   c = x;
+      if(r.nextDouble() < 0.2)
+        a = x;
+      else if(r.nextDouble() < 0.5)
+        b = x;
+      else if(r.nextDouble() < 0.7)
+        c = x;
     }
 
     rbt.print(rbt.root);
+    System.out.println();
+    System.out.println();
+    System.out.println();
 
     if(a != null) RedBlackTree.rbDelete(rbt, a);
     if(b != null) RedBlackTree.rbDelete(rbt, b);
     if(c != null) RedBlackTree.rbDelete(rbt, c);
+    rbt.print(rbt.root);
 
     //rbt.print(rbt.root);
   }
