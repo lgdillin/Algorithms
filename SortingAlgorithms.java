@@ -230,12 +230,43 @@ class RadixSort {
   }
 }
 
+class BucketSort {
+  private class Node {
+    int elem;
+    Node next;
+
+    Node(int k, Node prev) {
+      prev = this;
+    }
+  }
+
+  BucketSort() {
+
+  }
+
+  static void sort(int[] arr) {
+    bucketSort(arr);
+  }
+
+  static void bucketSort(int[] arr) {
+    Node[] buckets = new Node[arr.length - 1];
+
+    for(int i = 0; i < arr.length - 1; ++i) {
+      buckets[i] = null;
+    }
+
+    for(int i = 0; i < arr.length; ++i) {
+
+    }
+  }
+}
+
 
 class SortingAlgorithms {
   SortingAlgorithms() { }
 
   public static void main(String[] args) {
-    Random r = new Random(123456);
+    Random r = new Random();
     int length = r.nextInt(100);
     int[] arr = new int[length];
 
@@ -249,7 +280,7 @@ class SortingAlgorithms {
     System.out.println();
 
     //InsertionSort.sort(arr);
-    //MergeSort.sort(arr);
+    MergeSort.sort(arr);
     //HeapSort.sort(arr);
     //QuickSort.sort(arr);
     //CountingSort.sort(arr);
