@@ -54,8 +54,8 @@ class MergeSort {
     }
 
     // Sentinel values
-    left[n1] = 10000;
-    right[n2] = 10000;
+    left[n1] = 98;
+    right[n2] = 98;
     int i = 0;
     int j = 0;
 
