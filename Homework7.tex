@@ -63,8 +63,7 @@
 %\begin{lstlisting}[language=java]
 %\end{lstlisting}
 
-%%% graphics path
-\graphicspath{{./HW5}}
+%%% graphics path \graphicspath{{./HW5}}
 
 %%% END Article customizations
 
@@ -90,6 +89,49 @@
 Consider a modification to the activity-selection problem in which each activity $a_i$ has, in addition to a start and finish time, a value $v_i$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled.  That is, we wish to choose a set $A$ of compatible activities such that $\sum_{a_k \in A}^{} v_k$ is maximized. Give a polynomial-time algorithm for this problem. \\ 
 \noindent\rule{2cm}{0.4pt} \\
 
+My algorithm is a modified version of the book's iterative GREEDY-ACTIVITY-SELECTOR($s$, $f$).  Some things I used that may be different is Java's TreeSet and HashMap classes. I built an Activity class to handle all the attributes associated with each activity, and used the TreeSet to contain the output, that is, all the activities that were compatible via their start and end times.\\
+
+Next, I used a HashMap and keyed the Activities on their key.  This makes it easier to fetch activities during the activity selection. \\
+
+Then, for the actual greedy selection algorithm, I iterated through the activity ids, starting with $1$, and going to $n$.  I pushed that id into our result set, and tried to find all compatible activities that came afterward. The result of each iteration of this is a set of compatible activities.  From there, I calculate the total value of these activities, and compare to find the max:
+
+\newpage
+\begin{lstlisting}[language=java]
+greedyActivityValueSelector(i)
+	n = HashMap.size() // Number of elements in the hashmap
+	Set s = new Set
+	s.add(HashMap(i))
+
+	a = HashMap(i) 
+	for j = i to n
+		b = HashMap(j) // Get consecutive hash keys
+		if b.start >= a.finish
+			s.add(b)
+			a = b
+	return s
+
+max = 0
+maxSet = null
+for activity i to n:
+	Set s = greedyActivityValueSelector(i)
+
+	sum = 0
+	for each j in s
+		sum = sum + j.value
+
+	if sum > max
+		max = sum
+		maxSet = s
+
+print(maxSet)
+
+\end{lstlisting}
+
+
 
 
 \end{document}
+
+
+
+

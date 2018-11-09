@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  8 NOV 2018 09:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  9 NOV 2018 13:58
 entering extended mode
 **./Homework7.tex
 (Homework7.tex
@@ -328,18 +328,18 @@ LaTeX Warning: Unused global option(s):
 (Homework7.aux)
 \openout1 = `Homework7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -441,34 +441,60 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count128
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
+
+Overfull \hbox (9.53178pt too wide) in paragraph at lines 92--93
+[]\OT1/cmr/m/n/10 My al-go-rithm is a mod-i-fied ver-sion of the book's it-er-a
+-tive GREEDY-ACTIVITY-SELECTOR($\OML/cmm/m/it/10 s$\OT1/cmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+[1
+
+{C:/Users/lgdillin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (C:\miketex\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-) [1
+)
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 108.
 
-{C:/Users/lgdillin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Homewor
-k7.aux) ) 
+
+(C:\miketex\tex\latex\base\omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 108.
+ [2] (Homework7.aux) ) 
 Here is how much of TeX's memory you used:
- 6739 strings out of 492972
- 96756 string characters out of 3143401
- 354458 words of memory out of 3000000
- 10523 multiletter control sequences out of 15000+200000
- 9317 words of font info for 34 fonts, out of 3000000 for 9000
+ 6775 strings out of 492972
+ 97188 string characters out of 3143401
+ 364902 words of memory out of 3000000
+ 10555 multiletter control sequences out of 15000+200000
+ 9663 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,43p,491b,1127s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/miketex/font
-s/type1/public/amsfonts/cm/cmex10.pfb><C:/miketex/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/miketex/f
-onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/miketex/fonts/type1/public/amsfonts
-/cm/cmr10.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/miketex/
-fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/miketex/fonts/type1/public/amsfont
-s/cm/cmss12.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Homework7.pdf (1 page, 100541 bytes).
+ 42i,10n,43p,491b,1332s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/miketex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:
+/miketex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/miketex/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+<C:/miketex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/miketex/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/miketex/fonts/type1/p
+ublic/amsfonts/cm/cmss12.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb><C:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on Homework7.pdf (2 pages, 121685 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

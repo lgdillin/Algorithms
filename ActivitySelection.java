@@ -1,12 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Scanner;
-import java.util.StringTokenizer;
-import java.util.TreeSet;
+import java.util.*;
 
 class ActivityComparator implements Comparator<Activity> {
   public int compare(Activity a, Activity b) {
@@ -188,12 +181,24 @@ class ActivitySelection {
       }
     }
 
-    Iterator<Activity> itr1 = maxSet.iterator();
-    while(itr1.hasNext()) {
-      Activity a = itr1.next();
-      System.out.print(a.id + ", ");
+    try {
+      BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"));
+      String s = Integer.toString(max);
+      bw.write(s);
+      bw.newLine();
+
+      String s1 = "";
+      Iterator<Activity> itr1 = maxSet.iterator();
+      while(itr1.hasNext()) {
+        Activity a = itr1.next();
+        s1 = s1 + Integer.toString(a.id) + " ";
+      }
+      bw.write(s1);
+      bw.close();
+    } catch(IOException e) {
+      e.printStackTrace();
     }
-    System.out.println();
+    System.out.println("done");
 
     // TreeSet<Activity> ts = as.greedyActivitySelector(startTimes, finishTimes);
     // TreeSet<Activity> ts = as.recursiveActivitySelector(startTimes, finishTimes, 0, as.numActivities);
