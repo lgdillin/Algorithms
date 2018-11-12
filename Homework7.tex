@@ -127,7 +127,7 @@ print(maxSet)
 
 \end{lstlisting}
 
-
+I used a HashMap in associating the activity ids with an activity.  HashMaps can compute in $\Theta(1)$.  Also, TreeSets search and store in $\lg(n)$.  Note that initially in my "pseudocode" there is a call to greedyActivitySelector(i).  If $i = 1$, then the loop will run from $1$ to $n$, giving us initially a worst-case runtime $\mathcal{O}(n \lg n)$. Also, within the function call, we will have to run from $j = i$ to $n$, which will increase our runtime to $\mathcal{O}(n^{2} \lg n)$.  However, suppose that every single activity is inserted in the set.  Then the size of the set returned from the function is $n$.  Now that we have the function returned, we need to iterate over it and find the maximum sum.  If the size of the set is $n$, then we must iterate over all of the $n$ elements to find the max sum, which gives us a final worst-case runtime of $\mathcal{O}(n^{3} \lg n)$.
 
 
 \end{document}
