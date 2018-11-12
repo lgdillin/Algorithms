@@ -1,0 +1,138 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[20pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+%\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{mathtools}
+\usepackage{graphicx} % supports images in latex
+% These packages are all incorporated in the memoir class to one degree or another...
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+%%% Other stuff
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% Code syntax highliting
+\usepackage{listings}
+%\begin{lstlisting}[language=java]
+%\end{lstlisting}
+
+%%% graphics path \graphicspath{{./HW5}}
+
+%%% END Article customizations
+
+%%% nice things to keep around
+
+% \noindent\rule{2cm}{0.4pt} 
+%%% puts a small horizontal line
+
+% \mathcal{O} 
+%%% big O notation
+
+%%% The "real" document content comes below...
+
+\title{Algorithms Homework 8}
+\author{Liam Dillingham}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\section{Question 22.2-9} 
+Let $G = (V, E)$ be a connected, undirected graph. Give an $\mathcal{O}(V + E)$-time algorithm to compute a path in $G$ that traverses each edge in $E$ exactly once in each direction. Describe how you can find your way out of a maze if you are given a large supply of pennies. \\
+\noindent\rule{2cm}{0.4pt} \\
+
+
+
+\section{Question 22.3-7} 
+Rewrite the procedure DFS, using a stack to elimate recursion. \\
+\noindent\rule{2cm}{0.4pt} \\
+
+\begin{lstlisting}[language=java]
+DFS(G) // no recursion
+	for each vertex u in G.V
+		u.color = WHITE
+		u.pi = NIL
+	time = 0
+	for each vertex u in G.V
+		if u.color == WHITE
+			DFS-VISIT(G, u)
+
+DFS-VISIT(G, u)
+	
+\end{lstlisting}
+
+
+\section{Question 22.3-10} 
+Modify the pseudocode for depth-first search so that it prints out every edge in the directed graph $G$, together with its type. Show what modifications, if any, you need to make if $G$ is undirected. \\
+\noindent\rule{2cm}{0.4pt} \\
+
+
+
+
+\section{Question 22.3-12} 
+Show that we can use a depth-first search of an undirected graph $G$ to identify the connected components of $G$, and that the depth-first forest contains as many trees as $G$ has connected components.  More precisely, show how to modify depth-first search so that it assigns to each vertex $v$ an integer label $v.cc$ between $1$ and $k$, where $k$ isi the number of connected components of $G$, such that $u.cc = v.cc$ if and only if $u$ and $v$ are in the same connected component. \\
+\noindent\rule{2cm}{0.4pt} \\
+
+
+
+
+\section{Question 24.1-3} 
+Given a weighted, directed graph $G = (V, E)$ with no negative-weight cycles, let $m$ be the maximum over all the vertices $v \in V$ of the minimum  number of edges in a shortest path from the source $s$ to $v$.  (Here, the shortest path is by weight, not the number of edges). Suggest a simple change to the Bellman-Ford algorithm that allows it to terminate in $m + 1$ passes, even if $m$ is not known in advance. \\
+\noindent\rule{2cm}{0.4pt} \\
+
+
+
+
+\end{document}
+
+
+
+
