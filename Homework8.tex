@@ -89,27 +89,71 @@
 Let $G = (V, E)$ be a connected, undirected graph. Give an $\mathcal{O}(V + E)$-time algorithm to compute a path in $G$ that traverses each edge in $E$ exactly once in each direction. Describe how you can find your way out of a maze if you are given a large supply of pennies. \\
 \noindent\rule{2cm}{0.4pt} \\
 
+After trying many examples on paper, I have come up with the idea that the best way to do this is to perform a depth-first search.  For some edge $e \in E$ connected to our source node $s$, we follow a path from $s$ to its neighbor $v$, each time checking two cases: 
 
+\begin{itemize}
+\item Node $v$ has no unvisited edges
+\item Node $v$ is the source node $s$
+\end{itemize}
 
+Once either of these cases is satisfied, we follow our path in reverse direction until we reach our node $s$ again, thus crossing each edge on our path exactly once in each direction.  Then, we select another unvisited path and do the same until all edges have been visited once in each direction. 
+
+\newpage
+\begin{lstlisting}[language=java]
+// all colors are initially assumed to be white
+// Assume that G.Adj has nodes related to themselves
+COMPUTE-PATH(G, s)
+
+   // s has unvisited neighbors
+   for each vertex v in G.adj[s] where v.color != black 
+      if v == s
+	while !STACK.isEmpty()
+	   v = STACK.pop()
+
+      // v has no non-visited neighbors
+      else if all u in G.adj[v] have u.color == black 
+	while !STACK.isEmpty()
+	   v = STACK.pop()
+
+      else
+         STACK.push(v)
+         COMPUTE-PATH(G, v)
+// end
+\end{lstlisting}
+
+\newpage
 \section{Question 22.3-7} 
 Rewrite the procedure DFS, using a stack to elimate recursion. \\
 \noindent\rule{2cm}{0.4pt} \\
 
 \begin{lstlisting}[language=java]
 DFS(G) // no recursion
-	for each vertex u in G.V
-		u.color = WHITE
-		u.pi = NIL
-	time = 0
-	for each vertex u in G.V
-		if u.color == WHITE
-			DFS-VISIT(G, u)
+   for each vertex u in G.V
+      u.color = WHITE
+      u.pi = NIL
+   time = 0
+   STACK is an empty stack
+   for each vertex u in G.V
+      if u.color == WHITE
+         STACK.push(u)
+         DFS-VISIT(G, u)
 
 DFS-VISIT(G, u)
-	
+   while !STACK.isEmpty()
+      v = STACK.pop()
+      time = time + 1
+      v.d = time
+      for each w in G.Adj[v]
+         if w.color == WHITE
+            w.color = GREY
+            w.pi = v
+            STACK.push(w)
+      time = time + 1
+      v.f = time
+// end
 \end{lstlisting}
 
-
+\newpage
 \section{Question 22.3-10} 
 Modify the pseudocode for depth-first search so that it prints out every edge in the directed graph $G$, together with its type. Show what modifications, if any, you need to make if $G$ is undirected. \\
 \noindent\rule{2cm}{0.4pt} \\
