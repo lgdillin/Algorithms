@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  19 NOV 2018 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.24)  19 NOV 2018 15:18
 entering extended mode
 **./Homework8.tex
 (Homework8.tex
@@ -458,48 +458,48 @@ tex\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+Underfull \hbox (badness 10000) in paragraph at lines 131--133
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 188.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 193.
 
 (C:\miketex\tex\latex\base\omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 188.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 193.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 202--204
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
 [6] (Homework8.aux) ) 
 Here is how much of TeX's memory you used:
- 6825 strings out of 492972
- 97728 string characters out of 3143401
+ 6833 strings out of 492972
+ 97801 string characters out of 3143401
  368992 words of memory out of 3000000
- 10602 multiletter control sequences out of 15000+200000
+ 10610 multiletter control sequences out of 15000+200000
  9663 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,10n,43p,588b,1271s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -509,7 +509,7 @@ c/amsfonts/cm/cmr10.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
 :/miketex/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/miketex/fonts/type1/publ
 ic/amsfonts/cm/cmss12.pfb><C:/miketex/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ><C:/miketex/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Homework8.pdf (6 pages, 116668 bytes).
+Output written on Homework8.pdf (6 pages, 118300 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

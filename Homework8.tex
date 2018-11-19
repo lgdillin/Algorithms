@@ -96,31 +96,36 @@ After trying many examples on paper, I have come up with the idea that the best 
 \item Node $v$ is the source node $s$
 \end{itemize}
 
-Once either of these cases is satisfied, we follow our path in reverse direction until we reach our node $s$ again, thus crossing each edge on our path exactly once in each direction.  Then, we select another unvisited path and do the same until all edges have been visited once in each direction. 
+Our code will work as follows: 
+Follow an arbitrary path around the graph starting at node $s$, pushing each node onto the stack, and coloring it black.  Once one of the above conditions becomes true, we stop and begin popping back through the stack, deleting edge from the adjacency structure and re-coloring the node white.
 
 \newpage
 \begin{lstlisting}[language=java]
 // all colors are initially assumed to be white
-// Assume that G.Adj has nodes related to themselves
+Let S be a new empty stack
+Let s be an arbitrary node in G
+s.color = BLACK
 COMPUTE-PATH(G, s)
 
-   // s has unvisited neighbors
-   for each vertex v in G.adj[s] where v.color != black 
-      if v == s
-	while !STACK.isEmpty()
-	   v = STACK.pop()
-
-      // v has no non-visited neighbors
-      else if all u in G.adj[v] have u.color == black 
-	while !STACK.isEmpty()
-	   v = STACK.pop()
-
-      else
-         STACK.push(v)
+COMPUTE-PATH(G, s)
+   for each vertex v in G.adj[s]
+      if v.color != BLACK
+         S.push(v)
+         v.color = BLACK
          COMPUTE-PATH(G, v)
+   // All neighbors are BLACK
+   while S is not empty
+      u = S.pop()
+      u.color = WHITE
+      Remove edge (u,v) // Depends on implementation
+   Select another node w in G where G.ads[w] != 0
+   COMPUTE-PATH(G, w)
 // end
 \end{lstlisting}
 
+By popping nodes off of a stack, we are essentially visiting the nodes in opposite direction.  This algorithm visits every edge and node twice, giving it a runtime of $\mathcal{O}(2E + 2V) = \mathcal{O}(E + V)$
+
+To escape a maze using pennies, we can simply leave a penny on the ground at any sort of vertex.  A vertex is any point where a path ends, or where two paths meet, such as a 4-way, a tee, or an elbow.  By doing this, we can ensure that we don't continue to revisit locations in the maze we have already been.
 \newpage
 \section{Question 22.3-7} 
 Rewrite the procedure DFS, using a stack to elimate recursion. \\
