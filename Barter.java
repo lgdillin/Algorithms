@@ -90,6 +90,11 @@ class Graph {
         else return false;
       }
 
+      // We increment b to test if we have cycled back to our source
+      // We only want it this way specifically for the check
+      // Afterwards we reset it for iteration
+      --b;
+
       // We need some way to ship the src id back and forth so we don't
       // accidentally run into our base case
       // src--?
@@ -100,7 +105,7 @@ class Graph {
           if(adj[i][j] != 0) {
 
             // If we find an inefficient system
-            if(func(src, i, j, product * adj[i][j])) {
+            if(func(src, i, j+1, product * adj[i][j])) {
               System.out.println("WE GOT ONE");
               /// TRACK our way back
               return true;
@@ -177,7 +182,7 @@ class Barter {
 
     // We want to iterate by Vertex id, so we start at 1
     for(int i = 1; i <= 5; ++i) {
-      g.func(i, 0, 0, 1);
+      g.func(i, 0, i+1, 1);
     }
 
     /// WRITE to the output file
