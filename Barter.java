@@ -71,52 +71,155 @@ import java.util.*;
 //
 //   }
 // }
+//
+// class Graph {
+//     LinkedList<Integer> list;
+//     int nVertex;
+//     double[][] adj;
+//
+//     Graph(int n) {
+//       nVertex = n;
+//       adj = new double[n][n];
+//     }
+//
+//     boolean func(int src, int a, int b, double product) {
+//       // We found a cycle that includes our source
+//       if(a != src) {
+//         if((b) == src) {
+//           // We found an inefficient system
+//           if(product > 1)
+//             return true;
+//           else return false;
+//         }
+//       }
+//
+//       // We increment b to test if we have cycled back to our source
+//       // We only want it this way specifically for the check
+//       // Afterwards we reset it for iteration
+//       // --b;
+//
+//       // We need some way to ship the src id back and forth so we don't
+//       // accidentally run into our base case
+//       // src--?
+//       for(int i = b; i < nVertex; ++i) {
+//         for(int j = a; j < nVertex; ++j) {
+//
+//           // If we find an adjacent vertex
+//           if(adj[i][j] != 0) {
+//             //list.add(j);
+//
+//             // If we find an inefficient system
+//             if(func(src, i, j, product * adj[i][j])) {
+//               System.out.println("WE GOT ONE");
+//               /// TRACK our way back
+//               return true;
+//             } else {
+//               //list.removeLast();
+//             }
+//           }
+//
+//         }
+//       }
+//
+//       return false;
+//     }
+// }
 
 class Graph {
-    int nVertex;
-    double[][] adj;
+  enum Color { WHITE, GRAY, BLACK }
+  int nVertices;
+  double[][] adj;
+  Vertex source;
+  LinkedList<Vertex> vertices;
 
-    Graph(int n) {
-      nVertex = n;
-      adj = new double[n][n];
+  Graph(int n) {
+    nVertices = n;
+    adj = new double[n][n];
+
+    vertices = new LinkedList<Vertex>();
+    for(int i = 0; i < n; ++i) {
+      vertices.add(new Vertex(i+1));
+    }
+  }
+
+  static void dfs(Graph g) {
+    Iterator<Vertex> it = g.vertices.iterator();
+    while(it.hasNext()) {
+      Vertex u = it.next();
+      u.color = Color.WHITE;
+      u.pred = 0;
     }
 
-    boolean func(int src, int a, int b, double product) {
-      // We found a cycle that includes our source
-      if((b) == src) {
-        // We found an inefficient system
-        if(product > 1)
-          return true;
-        else return false;
+    it = g.vertices.iterator();
+    while(it.hasNext()) {
+
+      // u is our new source
+      Vertex u = it.next();
+      g.source = u;
+
+      if(u.color == Color.WHITE) {
+
+          dfsVisit(g, u);
       }
+        // Check if we have found a cycle
+        // if(dfsVisit(g, u)) {
+        //   if(u.pred != null) System.out.println("null");
+        //   while(u.pred != null) {
+        //     u = u.pred;
+        //     System.out.println(u.id);
+        //   }
+        // }
+    }
+  }
 
-      // We increment b to test if we have cycled back to our source
-      // We only want it this way specifically for the check
-      // Afterwards we reset it for iteration
-      --b;
+  static boolean dfsVisit(Graph g, Vertex u) {
 
-      // We need some way to ship the src id back and forth so we don't
-      // accidentally run into our base case
-      // src--?
-      for(int i = b; i < nVertex; ++i) {
-        for(int j = 0; j < nVertex; ++j) {
+    u.color = Color.GRAY;
+    for(int i = 0; i < g.nVertices; ++i) {
+      if(g.adj[u.id - 1][i] != 0) {
+        Vertex v = g.vertices.get(i);
+        System.out.println(v.id);
 
-          // If we find an adjacent vertex
-          if(adj[i][j] != 0) {
+        // Check if we found a cycle
+        if(v == g.source) {
+          if(checkEfficiency(g, v)) {
+            return true;
+          } else {
 
-            // If we find an inefficient system
-            if(func(src, i, j+1, product * adj[i][j])) {
-              System.out.println("WE GOT ONE");
-              /// TRACK our way back
-              return true;
-            }
           }
+        }
 
+        if(v.color == Color.WHITE) {
+          v.pred = u.id;
+          dfsVisit(g, v);
         }
       }
-
-      return false;
     }
+    u.color = Color.BLACK;
+    return false;
+  }
+
+  static boolean checkEfficiency(Graph g, Vertex u) {
+    Vertex t = u;
+    t = g.vertices.get(t.pred);
+    System.out.println(t.pred + " " + g.source.id);
+    while(t.id != g.source.id) {
+      System.out.print(t.id + ", ");
+      t = g.vertices.get(t.pred);
+    }
+    System.out.println();
+    return true;
+  }
+
+  class Vertex {
+    int id, pred;
+    Color color;
+
+    Vertex(int i) {
+      id = i;
+    }
+
+  }
 }
 
 class Barter {
@@ -180,10 +283,22 @@ class Barter {
     // Do the code part here
     b.printAdj(g);
 
-    // We want to iterate by Vertex id, so we start at 1
-    for(int i = 1; i <= 5; ++i) {
-      g.func(i, 0, i+1, 1);
-    }
+    Graph.dfs(g);
+
+    //g.func(0, 0, 0, 1);
+    // for(int i = 0; i < 4; ++i) {
+    //   g.list = new LinkedList<Integer>();
+    //   g.list.add(i);
+    //   if(g.func(i, 0, i, 1)) {
+    //     g.list.removeLast();
+    //     System.out.println("---------------");
+    //     while(g.list.size() != 0) {
+    //       System.out.print((g.list.poll() + 1) + " ");
+    //     }
+    //     System.out.println();
+    //   }
+    // }
+
 
     /// WRITE to the output file
     try {
