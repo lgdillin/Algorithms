@@ -1,0 +1,83 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[20pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{mathtools}
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% Other stuff
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% nice things to keep around
+
+% \noindent\rule{2cm}{0.4pt} %%% puts a small horizontal line
+% \mathcal{O} %%% big O notation
+
+%%% The "real" document content comes below...
+
+\title{Algorithms Homework 9}
+\author{Liam Dillingham}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+The algorithm I utilized for this assignment is a modified Depth-first search.  I believe this algorithm is the best because it can halt its progress as soon as an inefficient cycle is found.  So it has the potential to have a very fast run time if it finds an inefficient cycle on the first try. alternatively, since depth-first search runs in time $\mathcal{O}(V + E)$, it has worse-case runtime of $\mathcal{O}(n^{3})$ if the graph is dense. \\
+
+When the algorithm runs, it does a depth first search until it runs into the source vertex.  if it cannot, then there is no cycle, and that's okay, we can't determine an inefficient system if we can't return to our source.  However, if it does, it then computes the potential product and tests if it is greater than $1$.  If it is, the algorithm quits immediately and we are done.  If it is not, it backs up one step (returns from the source) and attempts to find some other path that can also reach the vertex.  If no possible inefficient cycle is found, it gets a new source and tries again.  It does this until one is found (at that point it exists immediately) otherwise the system is deemed efficient. \\
+
+When an inefficient system is found, it walks this cycle and pushes each vertex in the stack twice.  This double-pushing is simply so I can match the given output format for the assignment.  Since any inefficient path is sufficient for an inefficient system, once the inefficient path is found, I do this stack-pushing.  Then I stop running the algorithm and move to print out my path. \\ during the reading of the input file, I save a "data" matrix which saves all the conversion so that when I am printing out the sequence, I can get all the necessary information in constant time. However, popping from the stack will take $\mathcal{O}(n)$ time. \\
+
+Thus, this entire algorithm/assignment takes $\mathcal{O}(n^{3} + n) = \mathcal{O}(n^{3})$ time. 
+
+
+\end{document}
