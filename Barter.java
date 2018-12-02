@@ -187,7 +187,6 @@ class Graph {
 
   static boolean dfsVisit(Graph g, Vertex u) {
     boolean flag = false; // flags if we found an inefficient system
-    System.out.println(u.id);
 
     u.color = Color.GRAY;
     for(int i = 0; i < g.nVertices; ++i) {
@@ -287,7 +286,7 @@ class Barter {
 
     /// READ the input file
     try {
-      File file = new File("barterinput.txt");
+      File file = new File(args[0]);
 
       FileReader fileReader = new FileReader(file);
       BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -330,7 +329,7 @@ class Barter {
     // System.out.println("--------------------");
 
     // Do the code part here
-    b.printAdj(g);
+    //b.printAdj(g);
 
     Graph.dfs(g);
 
@@ -352,9 +351,9 @@ class Barter {
 
     /// WRITE to the output file
     try {
-      BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt"));
+      BufferedWriter bw = new BufferedWriter(new FileWriter(args[1]));
 
-      //bw.write(s);
+      bw.write(out);
       // bw.newLine();
 
 
