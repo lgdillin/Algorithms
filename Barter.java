@@ -128,9 +128,11 @@ import java.util.*;
 class Graph {
   enum Color { WHITE, GRAY, BLACK }
   int nVertices;
+  double iProduct; // Stores the product for an inefficient system
   double[][] adj;
   Vertex source;
   LinkedList<Vertex> vertices;
+  Stack<Vertex> iPath; // Stores the inefficient path (if it exists)
 
   Graph(int n) {
     nVertices = n;
@@ -139,6 +141,19 @@ class Graph {
     vertices = new LinkedList<Vertex>();
     for(int i = 0; i < n; ++i) {
       vertices.add(new Vertex(i+1));
+    }
+  }
+
+  double getEdgeWeight(Vertex u, Vertex v) {
+    return adj[u.id - 1][v.id - 1];
+  }
+
+  void setWhite() {
+    Iterator<Vertex> it = vertices.iterator();
+    while(it.hasNext()) {
+      Vertex u = it.next();
+      u.color = Color.WHITE;
+      u.pred = 0;
     }
   }
 
@@ -158,57 +173,76 @@ class Graph {
       g.source = u;
 
       if(u.color == Color.WHITE) {
-
-          dfsVisit(g, u);
+          if(dfsVisit(g, u))  {
+            return;
+          }
       }
-        // Check if we have found a cycle
-        // if(dfsVisit(g, u)) {
-        //   if(u.pred != null) System.out.println("null");
-        //   while(u.pred != null) {
-        //     u = u.pred;
-        //     System.out.println(u.id);
-        //   }
-        // }
+
+      //System.out.println(g.source.id);
+
+      //g.setWhite();
+
     }
   }
 
   static boolean dfsVisit(Graph g, Vertex u) {
+    boolean flag = false; // flags if we found an inefficient system
+    System.out.println(u.id);
 
     u.color = Color.GRAY;
     for(int i = 0; i < g.nVertices; ++i) {
       if(g.adj[u.id - 1][i] != 0) {
         Vertex v = g.vertices.get(i);
-        System.out.println(v.id);
 
         // Check if we found a cycle
         if(v == g.source) {
-          if(checkEfficiency(g, v)) {
-            return true;
-          } else {
-
-          }
+          v.pred = u.id;
+          if(inefficient(g, v)) return true;
+          //else g.setWhite();
         }
 
         if(v.color == Color.WHITE) {
           v.pred = u.id;
-          dfsVisit(g, v);
+          flag = dfsVisit(g, v);
+          if(flag) return true;
         }
       }
     }
-    u.color = Color.BLACK;
-    return false;
+    u.color = Color.WHITE;
+    return flag;
   }
 
-  static boolean checkEfficiency(Graph g, Vertex u) {
+  static boolean inefficient(Graph g, Vertex u) {
     Vertex t = u;
-    t = g.vertices.get(t.pred);
-    System.out.println(t.pred + " " + g.source.id);
+    double product = 1;
+
+    product *= g.getEdgeWeight(g.vertices.get(t.pred-1), t);
+    t = g.vertices.get(t.pred - 1);
     while(t.id != g.source.id) {
-      System.out.print(t.id + ", ");
-      t = g.vertices.get(t.pred);
+      product *= g.getEdgeWeight(g.vertices.get(t.pred-1), t);
+      t = g.vertices.get(t.pred - 1);
     }
-    System.out.println();
-    return true;
+
+    // If we find an inefficient system we need to save the path
+    if(product > 1) {
+      g.iPath = new Stack<Vertex>();
+
+      // first push the source in
+      g.iPath.push(g.source);
+
+      Vertex v = g.vertices.get(u.pred - 1);
+      g.iPath.push(v);
+
+      while(v.id != g.source.id) {
+        g.iPath.push(v);
+        v = g.vertices.get(v.pred - 1);
+        g.iPath.push(v);
+      }
+      g.iProduct = product;
+
+      return true;
+    }
+    return false;
   }
 
   class Vertex {
@@ -249,6 +283,8 @@ class Barter {
     Barter b = new Barter();
     Graph g = null;
 
+    double[][][] data = null; // Matrix to store data for output
+
     /// READ the input file
     try {
       File file = new File("barterinput.txt");
@@ -262,7 +298,9 @@ class Barter {
       StringTokenizer st = new StringTokenizer(line);
 
       // Set the number of products
-      g = new Graph(Integer.parseInt(st.nextToken()));
+      int numProducts = Integer.parseInt(st.nextToken());
+      g = new Graph(numProducts);
+      data = new double[numProducts][numProducts][2];
 
       while ((line = bufferedReader.readLine()) != null) {
         st = new StringTokenizer(line);
@@ -273,6 +311,9 @@ class Barter {
         double y = Double.parseDouble(st.nextToken());
 
         g.adj[i][j] = y / x;
+
+        data[i][j][0] = x;
+        data[i][j][1] = y;
         // b.adj[j][i] = x / y;
       }
 
@@ -280,25 +321,34 @@ class Barter {
       e.printStackTrace();
     }
 
+    // for(int i = 0; i < data.length; ++i) {
+    //   for(int j = 0; j < data.length; ++j) {
+    //     System.out.println((i+1) + " " + (j+1) + " " + data[i][j][0] + " " + data[i][j][1]);
+    //   }
+    //   System.out.println();
+    // }
+    // System.out.println("--------------------");
+
     // Do the code part here
     b.printAdj(g);
 
     Graph.dfs(g);
 
-    //g.func(0, 0, 0, 1);
-    // for(int i = 0; i < 4; ++i) {
-    //   g.list = new LinkedList<Integer>();
-    //   g.list.add(i);
-    //   if(g.func(i, 0, i, 1)) {
-    //     g.list.removeLast();
-    //     System.out.println("---------------");
-    //     while(g.list.size() != 0) {
-    //       System.out.print((g.list.poll() + 1) + " ");
-    //     }
-    //     System.out.println();
-    //   }
-    // }
-
+    String out = "";
+    if(g.iPath == null) {
+      out += "no";
+    } else {
+      out += "yes\n";
+      while(!g.iPath.empty()) {
+        int i = g.iPath.pop().id;
+        int j = g.iPath.pop().id;
+        out += i + " " + j + " ";
+        out += data[i-1][j-1][0] + " " + data[i-1][j-1][1] + "\n";
+      }
+    }
+    out += "one kg of product " + g.source.id + " gets " + String.format("%.4f", g.iProduct)
+      + " of product " + g.source.id + " from the above sequence";
+    System.out.println(out);
 
     /// WRITE to the output file
     try {
