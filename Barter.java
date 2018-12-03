@@ -172,6 +172,8 @@ class Graph {
       Vertex u = it.next();
       g.source = u;
 
+System.out.println(g.source.id);
+
       if(u.color == Color.WHITE) {
           if(dfsVisit(g, u))  {
             return;
