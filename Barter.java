@@ -344,9 +344,9 @@ class Barter {
         out += i + " " + j + " ";
         out += data[i-1][j-1][0] + " " + data[i-1][j-1][1] + "\n";
       }
+      out += "one kg of product " + g.source.id + " gets " + String.format("%.4f", g.iProduct)
+        + " of product " + g.source.id + " from the above sequence";
     }
-    out += "one kg of product " + g.source.id + " gets " + String.format("%.4f", g.iProduct)
-      + " of product " + g.source.id + " from the above sequence";
     System.out.println(out);
 
     /// WRITE to the output file
