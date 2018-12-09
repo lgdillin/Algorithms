@@ -1,9 +1,9 @@
 import java.util.Random;
 
 
-enum Color {
-  RED, BLACK;
-}
+// enum Color {
+//   RED, BLACK;
+// }
 
 class RBNode {
   Color color;
